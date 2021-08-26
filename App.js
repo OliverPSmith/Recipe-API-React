@@ -17,7 +17,7 @@ function App() {
 
   const searchForRecipe = (query) => {
     setLoading(true);
-    let url = `search?q=${query}&app_id=${APP_ID}&app_key=${API_KEY}`;
+    let url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${API_KEY}`;
     fetch(url, { mode: "no-cors" })
       .then(response => {
         return response.json();
